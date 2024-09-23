@@ -50,9 +50,10 @@ body {
 .outline, .top-wrapper, .bottom-wrapper, .button, .screen {
   border: 1px solid black;
 }
-.outline{
+.outline {
   width: 36rem;
   height: 44rem;
+  border-radius: 5px;
   background-image: url('../media/beach.jpeg');
 }
 .top-wrapper {
@@ -69,7 +70,8 @@ body {
   justify-content: left;
   align-items: center;
   min-width: 0;
-  box-shadow: rgb(129, 165, 195) 3px 3px 6px 0px inset, rgba(173, 173, 173, 0.116) -3px -3px 6px 1px inset;
+  border-radius: 3px;
+  box-shadow: rgb(129, 165, 195) 2px 2px 3px 0.5px inset, rgba(46, 46, 46, 0.116) -3px -3px 6px 1px inset;
 }
 pre {
   display: block;
@@ -91,14 +93,26 @@ pre {
   justify-content: center;
   align-items: center;
   font-weight: 500;
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 12px 20px, rgba(0, 0, 0, 0.06) 0px 4px 8px;
+  border-radius: 4px;
+  box-shadow: 1.5px 1.5px 1px 1px rgba(23, 50, 55, 0.79), 3px 3px 2px 1px rgba(23, 50, 55, 0.2);
 }
-.button:hover {
+.number {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.08) 0 0);
+}
+.zero {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.174) 0 0);
+}
+.math, #clear, #enter {
+  background-image: linear-gradient(rgba(191, 147, 217, 0.168) 0 0);
+}
+.button:hover, #clear:hover, #enter:hover {
   background-image: linear-gradient(rgba(26, 7, 62, 0.25) 0 0);
+  box-shadow: 0.5px 0.5px 1.2px 0.3px rgba(23, 50, 55, 0.79);
 }
 
 .button:active {
   background-image: linear-gradient(rgba(23, 1, 42, 0.5) 0 0);
+  box-shadow: 0.2px 0.2px 0.2px 0.2px rgba(23, 50, 55, 0.79);
 }
 
 
