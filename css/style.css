@@ -1,0 +1,118 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+@font-face {
+  font-family: 'VT323';
+  src: url('../fonts/VT323/VT323-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Orbitron';
+  src: url('../fonts/Orbitron/Orbitron-VariableFont_wght.ttf') format('truetype');
+}
+html {
+  font-size: 62.5%;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+body {
+  font-size: 3rem;
+  font-family: 'Orbitron';
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1) ), url('../media/night.jpg');
+  background-size: 250%;
+  background-position: top;
+}
+.outline, .top-wrapper, .bottom-wrapper, .button, .screen {
+  border: 1px solid black;
+}
+.outline{
+  width: 36rem;
+  height: 44rem;
+  background-image: url('../media/beach.jpeg');
+}
+.top-wrapper {
+  height: 10rem;
+  padding: 1rem;
+  outline: 1px solid black;
+}
+.screen {
+  height: 100%;
+  font-family: 'VT323';
+  font-size: 5rem;
+  display: flex;
+  padding-left: 1rem;
+  justify-content: left;
+  align-items: center;
+  min-width: 0;
+  box-shadow: rgb(129, 165, 195) 3px 3px 6px 0px inset, rgba(173, 173, 173, 0.116) -3px -3px 6px 1px inset;
+}
+pre {
+  display: block;
+  width: 32rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.bottom-wrapper {
+  height: 34rem;
+  display: grid;
+  gap: 0.8rem;
+  padding: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 12px 20px, rgba(0, 0, 0, 0.06) 0px 4px 8px;
+}
+.button:hover {
+  background-image: linear-gradient(rgba(26, 7, 62, 0.25) 0 0);
+}
+
+.button:active {
+  background-image: linear-gradient(rgba(23, 1, 42, 0.5) 0 0);
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+#clear, #enter {
+  font-size: 2rem;
+}
+#addition {
+  font-size: 4rem;
+  font-weight: 300;
+  padding-bottom: 0.5rem;
+}
+#multiplication {
+  font-size: 2.5rem;
+}
