@@ -10,6 +10,7 @@ let mathStatus = 'initial'
 let numVar1 = '';
 let numVar2 = '';
 let mathVar = '';
+let newOperation = false;
 
 // code listens for any button clicks. runs main function with mathStatus conditionals, using button type class and id as arguments
 const buttons = document.querySelectorAll('.button');
@@ -49,8 +50,15 @@ function mainFunction(click) {
         }
         // else if number class clicked again, concats button digit string (+=) to numVar1 and replace screen with numVar1 str
         else if (buttonClass.contains('number')) {
-            numVar1 += buttonID;
-            screen.innerText = numVar1;
+            if (newOperation === false) {
+                numVar1 += buttonID;
+                screen.innerText = numVar1;
+            }
+            else if (newOperation === true) {
+                numVar1 = buttonID;
+                screen.innerText = numVar1;
+                newOperation = false;
+            }
         }
     }
     // after first math click
@@ -97,6 +105,8 @@ function mainFunction(click) {
             numVar1 = numVar2;
             numVar2 = ''
             mathStatus = 'pending'
+            newOperation = true;
+            // I want that after clicking numbers, operator, numbers, enter: it assigns numvar2 to numvar1 (allowing additional math). If I click another operator, it records it as mathvar and acts like pending, but if I click another number it should replace the screen and num with it instead or concatingating
         }
         else if (buttonClass.contains('math')) {
             if (mathVar === 'addition') {
