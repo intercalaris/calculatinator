@@ -130,3 +130,20 @@ pre {
 #multiplication {
   font-size: 2.5rem;
 }
+
+
+
+footer {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.2rem;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  right: 1rem;
+  text-align: right;
+}
+
+footer p {
+  margin: 0;
+  padding-bottom: 2px;
+}
