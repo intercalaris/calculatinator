@@ -1,0 +1,97 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+@font-face {
+  font-family: 'VT323';
+  src: url('../fonts/VT323/VT323-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Orbitron';
+  src: url('../fonts/Orbitron/Orbitron-VariableFont_wght.ttf') format('truetype');
+}
+html {
+  font-size: 62.5%;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+body {
+  font-size: 3rem;
+  font-family: 'Orbitron';
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.outline, .top-wrapper, .bottom-wrapper, .button, .screen {
+  border: 1px solid black;
+}
+.outline{
+  width: 36rem;
+  height: 44rem;
+}
+.top-wrapper {
+  height: 10rem;
+  padding: 1rem;
+  outline: 1px solid black;
+}
+.screen {
+  height: 100%;
+  font-family: 'VT323';
+  font-size: 5rem;
+  display: flex;
+  padding-left: 1rem;
+  justify-content: left;
+  align-items: center;
+}
+.bottom-wrapper {
+  height: 34rem;
+  display: grid;
+  gap: 0.8rem;
+  padding: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500
+}
+
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+#clear, #enter {
+  font-size: 2rem;
+}
+#addition {
+  font-size: 4rem;
+  font-weight: 300;
+}
+#multiplication {
+  font-size: 2.5rem;
+}
