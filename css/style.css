@@ -110,7 +110,7 @@ pre {
   box-shadow: 0.5px 0.5px 1.2px 0.3px rgba(23, 50, 55, 0.79);
 }
 
-.button:active {
+.button:active, #clear:active, #enter:active  {
   background-image: linear-gradient(rgba(23, 1, 42, 0.5) 0 0);
   box-shadow: 0.2px 0.2px 0.2px 0.2px rgba(23, 50, 55, 0.79);
 }
